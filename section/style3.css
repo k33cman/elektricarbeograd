@@ -1,0 +1,689 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d2a30;
+    color: white;
+}
+
+.brand-title  {
+    font-size: 1.5rem;
+    margin: .5rem;
+    color: #fff;
+}
+
+.brand-title span {
+    font-size: 1.5rem;
+    margin: .5rem;
+    color: #f3cc29;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+
+.pozvati {
+    width: 100%;
+    text-align: center;
+    padding: 200px;
+
+}
+
+.pozvati h2 {
+    font-weight: bold;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0 ;
+}
+
+.pozvati h2::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #f3cc29;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+
+}
+
+@keyframes animate {
+
+    0% {
+        width: 100px;
+    }
+
+    50% {
+        width: 200px;
+    }
+    
+    100% {
+        width: 100px;
+    }
+}
+
+.pozvati a {
+    display: inline;
+    width: 100%;
+    text-align: inherit;
+    text-decoration:  none;
+    font-size: 14px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+    background-color: #f90;
+    box-shadow: 0 5px 0 #c77700;
+    border-radius: 5px;
+    transition: 1.5s;
+}
+
+.pozvati a:hover {
+
+    border: 1px solid transparent;
+    text-decoration: none;
+    color: #4868cf;
+    font-weight: bold;
+}
+
+.pozvati p {
+    text-align: center;
+    position: relative;
+    top: 27px;
+    color: #818181;
+    font-size: 13px;
+}
+
+.pozovi {
+    display: none;
+}
+
+footer {
+    bottom: 0;
+}
+
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+    header {
+        padding-top: 40px;
+    }
+}
+
+.footer-distributed {
+    background-color: #2d2a30;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 30%;
+}
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px;
+    margin: 0;
+}
+
+
+.footer-distributed h3 span {
+    color: #f3cc29 ;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #f3cc29 ;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+    background-color: #3F71EA;
+}
+
+.footer-links a:hover {
+    color: #3F71EA;
+}
+
+@media (max-width: 880px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}       
+
+@media screen and (max-width: 552px) {
+    
+    .pozvati {
+        width: 100%;
+        text-align: center;
+        padding: 200px;
+    
+    }
+    
+    .pozvati h2 {
+        font-weight: bold;
+        font-size: 35px;
+        position: relative;
+        margin: 40px 0 ;
+    }
+    
+    .pozvati h2::before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background-color: #f3cc29;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: animate 4s linear infinite;
+    
+    }
+    
+    @keyframes animate {
+    
+        0% {
+            width: 100px;
+        }
+    
+        50% {
+            width: 200px;
+        }
+        
+        100% {
+            width: 100px;
+        }
+    }
+    
+    .pozvati a {
+        display: inherit;
+        width: 100%;
+        text-align: inherit;
+        text-decoration:  none;
+        font-size: 14px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: #fff;
+        background-color: #f90;
+        box-shadow: 0 5px 0 #c77700;
+        border-radius: 5px;
+        transition: 1.5s;
+    }
+    
+    .pozvati a:hover {
+    
+        border: 1px solid transparent;
+        text-decoration: none;
+        color: #4868cf;
+        font-weight: bold;
+    }
+    
+    .pozvati p {
+        text-align: center;
+        position: relative;
+        top: 27px;
+        color: #818181;
+        font-size: 13px;
+    }
+    
+}
+
+@media screen and (max-width: 486px) {
+    
+    .pozvati {
+        width: 100%;
+        text-align: center;
+        padding: 200px;
+        display: none;
+    
+    }
+    
+    .pozvati h2 {
+        font-weight: bold;
+        font-size: 35px;
+        position: relative;
+        left: -76px;
+        margin: 40px 0 ;
+        display: none;
+    }
+    
+    .pozvati h2::before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background-color: #f3cc29;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: animate 4s linear infinite;
+        display: none;
+    
+    }
+    
+    @keyframes animate {
+    
+        0% {
+            width: 100px;
+        }
+    
+        50% {
+            width: 200px;
+        }
+        
+        100% {
+            width: 100px;
+        }
+    }
+    
+    .pozvati a {
+        display: inherit;
+        width: 325%;
+        text-align: inherit;
+        text-decoration:  none;
+        font-size: 14px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: #fff;
+        background-color: #f90;
+        box-shadow: 0 5px 0 #c77700;
+        border-radius: 5px;
+        transition: 1.5s;
+        position: relative;
+        left: -80px;
+        display: none;
+    }
+    
+    .pozvati a:hover {
+    
+        border: 1px solid transparent;
+        text-decoration: none;
+        color: #4868cf;
+        font-weight: bold;
+        display: none;
+    }
+    
+    .pozvati p {
+        text-align: center;
+        position: relative;
+        top: 27px;
+        color: #818181;
+        font-size: 13px;
+        position: relative;
+        left: -49px;
+        display: none;
+    }
+
+    .pozovi {
+        display: block;
+        padding: 100px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .pozovi h2 {
+        font-weight: bold;
+        font-size: 36px;
+    }
+
+
+    .pozovi .telefon {
+        text-decoration: none;
+        list-style: none;
+        color: #f90;
+
+        
+    }
+
+    .pozovi .telefon1 {
+        padding-top: 10px;
+        text-decoration: none;
+        list-style: none;
+        color: #f90;
+
+    }
+
+    .pozovi p {
+        text-align: center;
+        position: relative;
+        top: 27px;
+        color: #818181;
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width: 334px) {
+
+    .pozvati {
+        width: 100%;
+        text-align: center;
+        padding: 200px;
+        display: none;
+    
+    }
+    
+    .pozvati h2 {
+        font-weight: bold;
+        font-size: 35px;
+        position: relative;
+        left: -76px;
+        margin: 40px 0 ;
+        display: none;
+    }
+    
+    .pozvati h2::before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background-color: #f3cc29;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: animate 4s linear infinite;
+        display: none;
+    
+    }
+    
+    @keyframes animate {
+    
+        0% {
+            width: 100px;
+        }
+    
+        50% {
+            width: 200px;
+        }
+        
+        100% {
+            width: 100px;
+        }
+    }
+    
+    .pozvati a {
+        display: inherit;
+        width: 325%;
+        text-align: inherit;
+        text-decoration:  none;
+        font-size: 14px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: #fff;
+        background-color: #f90;
+        box-shadow: 0 5px 0 #c77700;
+        border-radius: 5px;
+        transition: 1.5s;
+        position: relative;
+        left: -80px;
+        display: none;
+    }
+    
+    .pozvati a:hover {
+    
+        border: 1px solid transparent;
+        text-decoration: none;
+        color: #4868cf;
+        font-weight: bold;
+        display: none;
+    }
+    
+    .pozvati p {
+        text-align: center;
+        position: relative;
+        top: 27px;
+        color: #818181;
+        font-size: 13px;
+        position: relative;
+        left: -49px;
+        display: none;
+    }
+
+    .pozovi {
+        display: block;
+        padding: 100px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .pozovi h2 {
+        font-weight: bold;
+        font-size: 36px;
+    }
+
+
+    .pozovi .telefon {
+        text-decoration: none;
+        list-style: none;
+        color: #f90;
+
+        
+    }
+
+    .pozovi .telefon1 {
+        padding-top: 10px;
+        text-decoration: none;
+        list-style: none;
+        color: #f90;
+
+    }
+
+    .pozovi p {
+        text-align: center;
+        position: relative;
+        color: #818181;
+        font-size: 13px;
+    }
+}
